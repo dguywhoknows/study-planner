@@ -3,126 +3,81 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Exam Planner</title>
-<meta name="description" content="AI breaks your syllabus into topics; a spaced-repetition scheduler builds a realistic study calendar you can export to Google/Apple Calendar.">
-<meta name="app-repo" content="https://github.com/dguywhoknows/study-planner">
-<meta name="app-version" content="2.0.0">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%233b6fe0'/%3E%3Ctext x='16' y='21' text-anchor='middle' font-family='Arial%2CHelvetica%2Csans-serif' font-weight='700' font-size='13' fill='white'%3EEP%3C/text%3E%3C/svg%3E">
+<title>Exam Planner: From four exams to a plan you can actually follow</title>
+<meta name="description" content="AI breaks each syllabus into topics; a scheduler turns them into a day-by-day calendar with spaced reviews.">
+<meta property="og:title" content="Exam Planner">
+<meta property="og:description" content="AI breaks each syllabus into topics; a scheduler turns them into a day-by-day calendar with spaced reviews.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%233b6fe0'/%3E%3Ctext x='16' y='21' text-anchor='middle' font-family='Arial,Helvetica,sans-serif' font-weight='700' font-size='13' fill='white'%3EEP%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles/base.css">
-<link rel="stylesheet" href="styles/app.css">
+<link rel="stylesheet" href="styles/landing.css">
+<style>:root { --accent: #3b6fe0; }</style>
 </head>
-<body>
-<header class="topbar">
-  <div class="brand"><span class="logo" aria-hidden="true">EP</span><div><h1>Exam Planner</h1><p>From “I have 4 exams” to a day-by-day plan in seconds.</p></div></div>
-  <nav class="topnav" data-nav aria-label="Pages"></nav>
-  <div class="top-actions"><a class="btn ghost sm" href="https://github.com/dguywhoknows/study-planner" target="_blank" rel="noopener">GitHub</a><span data-ai-badge></span></div>
+<body class="landing">
+<header class="l-nav">
+  <a class="l-brand" href="#top"><span class="logo">EP</span><b>Exam Planner</b></a>
+  <nav aria-label="Sections"><a href="#demo">Demo</a><a href="#ask">Ask it</a><a href="#features">Features</a><a href="#faq">FAQ</a></nav>
+  <div class="l-nav-cta"><a class="btn primary" href="app.html">Open the app</a></div>
 </header>
-<div class="page active" data-page="plan" data-title="Plan">
-<main class="grid side">
-  <aside class="stack">
-    <section class="card stack">
-      <div class="row between"><h2 style="margin:0">Exams</h2><button class="btn sm" id="addExam">Add exam</button></div>
-      <div id="exams"></div>
-    </section>
-    <section class="card stack">
-      <h2 style="margin:0">Availability</h2>
-      <div class="avail" id="avail"></div>
-      <div class="grid cols-2">
-        <label>Session length<select id="session"><option value="25">25 min (pomodoro)</option><option value="45" selected>45 min</option><option value="60">60 min</option><option value="90">90 min</option></select></label>
-        <label>Start time<input class="input" type="time" id="startTime" value="16:00"></label>
-      </div>
-      <label>Days off <span class="muted small">(comma-separated dates)</span><input class="input" id="blackout" placeholder="2026-10-31, 2026-11-01"></label>
-      <button class="btn primary" id="plan">Build my plan</button>
-    </section>
-  </aside>
-  <section class="stack">
-    <div class="kpis" id="tiles"></div>
-    <div class="card hidden" id="warnCard"></div>
-    <div class="card">
-      <div class="row between"><h2 style="margin:0">Daily load</h2><div class="row"><button class="btn sm ghost" id="replan" disabled>Replan from today</button><button class="btn sm ghost" id="ics" disabled>Export .ics</button></div></div>
-      <div id="load"></div>
+
+<main id="top">
+  <section class="l-hero">
+    <p class="l-kicker">Free · runs in your browser · AI built in</p>
+    <h1>From four exams to a plan you can actually follow.</h1>
+    <p class="l-sub">AI breaks each syllabus into topics; a scheduler turns them into a day-by-day calendar with spaced reviews.</p>
+    <div class="l-actions"><a class="btn primary big" href="app.html">Open the app</a><a class="btn big" href="#demo">See it working</a></div>
+  </section>
+
+  <section class="l-demo reveal" id="demo">
+    <div class="l-window"><div class="l-window-bar"><i></i><i></i><i></i><span>Exam Planner</span></div>
+      <iframe src="app.html?embed=1" title="Exam Planner live demo" loading="lazy"></iframe></div>
+    <p class="l-caption">This is the real app running below, not a recording. Try it.</p>
+  </section>
+
+  <section class="l-section reveal" id="ask">
+    <div class="l-head"><p class="l-kicker">Just say what you want</p><h2>Tell it in plain words. It uses its own tools to do it.</h2>
+      <p>Open the AI box in the app, type a request, and the AI drives the app's real features for you: it sets things up, edits, runs and reports back. Standing instructions let you shape every AI feature to how you like to work.</p></div>
+    <div class="l-prompts"><div class="l-prompt"><div class="say">Add a biology exam on the 20th covering cells, genetics and evolution</div><div class="does">Adds the exam with its syllabus.</div></div><div class="l-prompt"><div class="say">I can only study 2 hours on weekdays</div><div class="does">Updates your availability and rebuilds the plan.</div></div><div class="l-prompt"><div class="say">Quiz me on my weakest topic</div><div class="does">Opens a practice quiz on the lowest-mastery topic.</div></div></div>
+  </section>
+
+  <section class="l-section reveal" id="features">
+    <div class="l-head"><p class="l-kicker">What it does</p><h2>Everything in one place</h2></div>
+    <div class="l-grid"><div class="l-card"><h3>Exam editor</h3><p>Exam editor with difficulty/confidence sliders and optional syllabus</p></div><div class="l-card"><h3>AI topic breakdown</h3><p>AI topic breakdown with hour estimates and study tips (editable)</p></div><div class="l-card"><h3>Greedy constraint scheduler</h3><p>Urgency × weight priority, subject interleaving, sequential learning units</p></div><div class="l-card"><h3>Spaced repetition</h3><p>Automatic reviews at +2 and +6 days, mock exam and final review before each test</p></div><div class="l-card"><h3>Capacity</h3><p>Capacity, days off and overflow warnings with hour shortfall per subject</p></div><div class="l-card"><h3>Stacked daily-load chart</h3><p>Stacked daily-load chart, weekly calendar, click-to-complete sessions</p></div><div class="l-card"><h3>ICalendar</h3><p>iCalendar (.ics) export and an AI &#x27;today&#x27;s brief&#x27; coach</p></div><div class="l-card"><h3>Replan from today</h3><p>Completed sessions are kept and missed ones are redistributed across the remaining days</p></div><div class="l-card"><h3>Today page</h3><p>Checklist of today&#x27;s sessions, missed-session alert, AI daily brief and a study streak</p></div></div>
+  </section>
+
+  <section class="l-section reveal">
+    <div class="l-head"><p class="l-kicker">How it works</p><h2>Real engines where it counts, AI where it helps</h2></div>
+    <div class="l-steps">
+      <div><span>1</span><h3>Open the app</h3><p>No sign-up needed right now. Everything runs in your browser.</p></div>
+      <div><span>2</span><h3>Ask in your own words</h3><p>Type or click. The AI handles syllabus → topics + hour estimates + tips (JSON); daily brief that pairs each session with a concrete study technique.</p></div>
+      <div><span>3</span><h3>Keep what you make</h3><p>Your work is saved in your browser and can be exported any time.</p></div>
     </div>
-    <div class="card"><h2>Topic breakdown</h2><div id="topics"></div></div>
+    <p class="l-note">Computed locally, with no AI involved: scheduling, spaced repetition, capacity planning, charts, calendar, .ics generation.</p>
+  </section>
+
+  <section class="l-section reveal" id="faq">
+    <div class="l-head"><p class="l-kicker">Questions</p><h2>Good to know</h2></div>
+    <div class="l-faq">
+      <details><summary>Is it free?</summary><p>Yes. Every feature is free. </p></details>
+      <details><summary>Where is my data stored?</summary><p>What you create stays in this browser on this device. You can export a backup or delete everything from Settings.</p></details>
+      <details><summary>Do I need an API key?</summary><p>Not to try it: the app runs in demo mode with sample AI output. For live AI, connect a free Groq or OpenRouter key in Settings.</p></details>
+      <details><summary>What can I type into the AI box?</summary><p>Anything you would ask a helpful colleague who knows the app, such as: "Add a biology exam on the 20th covering cells, genetics and evolution". It plans the steps, runs the app's own functions and tells you what it did. The Instructions tab saves preferences every AI feature follows.</p></details>
+      <details><summary>Can I see the code?</summary><p>Yes. It is open source under the MIT license on <a href="https://github.com/dguywhoknows/study-planner" rel="noopener">GitHub</a>, with a <a href="tests/">public test suite</a>.</p></details>
+    </div>
+  </section>
+
+  <section class="l-final reveal">
+    <h2>From four exams to a plan you can actually follow.</h2>
+    <a class="btn primary big" href="app.html">Open the app</a>
   </section>
 </main>
-</div>
 
-<div class="page" data-page="today" data-title="Today">
-<main class="grid side">
-  <aside class="stack">
-    <div class="card stack timer-card">
-      <h2 style="margin:0">Focus timer</h2>
-      <select id="focusFor" aria-label="What are you studying"></select>
-      <div class="clock" id="clock">25:00</div>
-      <div class="phase small muted" id="phase">Focus</div>
-      <div class="row" style="justify-content:center"><button class="btn primary" id="tStart">Start</button><button class="btn" id="tReset">Reset</button><button class="btn ghost" id="tSkip">Skip</button></div>
-      <div class="grid cols-2"><label>Focus<select id="tFocus"><option>25</option><option>45</option><option>50</option><option>60</option></select></label><label>Break<select id="tBreak"><option>5</option><option>10</option><option>15</option></select></label></div>
-      <div class="small muted" id="focusToday"></div>
-    </div>
-  </aside>
-  <section class="stack">
-    <div class="card stack">
-      <div class="row between"><div><h2 style="margin:0" id="todayTitle">Today</h2><p class="small muted" style="margin:2px 0 0" id="todaySub"></p></div><button class="btn sm ghost" id="brief">Daily brief</button></div>
-      <div id="todayList"></div>
-      <div id="briefOut" class="prose"></div>
-    </div>
-    <div class="card hidden" id="missedCard"></div>
-  </section>
-</main>
-</div>
-
-<div class="page" data-page="calendar" data-title="Calendar">
-<main class="stack">
-  <div class="card">
-    <div class="row between"><h2 style="margin:0">Week</h2><div class="row"><button class="btn sm ghost" id="prevW" aria-label="Previous week">Prev</button><button class="btn sm ghost" id="thisW">This week</button><span id="weekLbl" class="small"></span><button class="btn sm ghost" id="nextW" aria-label="Next week">Next</button></div></div>
-    <div id="cal" class="cal"></div>
-  </div>
-  <div class="card"><h2>Countdown</h2><div id="countdown" class="grid cols-3"></div></div>
-</main>
-</div>
-
-<div class="page" data-page="practice" data-title="Practice">
-<main class="grid side">
-  <aside class="stack">
-    <div class="card stack">
-      <h2 style="margin:0">Practice quiz</h2>
-      <label>Subject<select id="pSubject"></select></label>
-      <label>Topic<select id="pTopic"></select></label>
-      <label>Questions<select id="pCount"><option>3</option><option selected>5</option><option>8</option></select></label>
-      <button class="btn primary" id="pGo">Generate questions</button>
-      <p class="small muted" style="margin:0">Answer in your head or on paper, reveal, then grade yourself honestly. Grades feed topic mastery and exam readiness.</p>
-    </div>
-    <div class="card"><h2>Mastery</h2><div id="masteryList"></div></div>
-  </aside>
-  <section class="stack" id="quiz"><div class="card empty">Pick a topic and generate questions.</div></section>
-</main>
-</div>
-
-<div class="page" data-page="grades" data-title="Grades">
-<main class="stack">
-  <div class="page-head"><div><h2>Grade calculator</h2><p>Enter each course's weighted components and see what you need on the rest.</p></div><button class="btn primary" id="addCourse">Add course</button></div>
-  <div class="grid cols-2" id="courses"></div>
-</main>
-</div>
-
-<div class="page" data-page="progress" data-title="Progress">
-<main class="stack">
-  <div class="kpis" id="progKpis"></div>
-  <div class="grid cols-2">
-    <div class="card"><h2>Exam readiness</h2><div id="ready"></div></div>
-    <div class="card"><h2>Focus time, last 14 days</h2><div id="focusChart"></div></div>
-  </div>
-  <div class="card"><h2>Time by subject</h2><div id="subjectSplit"></div></div>
-</main>
-</div>
-
-<div class="page" data-page="settings" data-title="Settings"></div>
-<script src="src/lib/dom.js"></script>
-<script src="src/lib/ai.js"></script>
-<script src="src/lib/router.js"></script>
-<script src="src/core.js"></script>
-<script src="src/app.js"></script>
+<footer class="l-foot"><span>Exam Planner</span><span><a href="https://github.com/dguywhoknows/study-planner" rel="noopener">Source</a> · <a href="tests/">Tests</a> · MIT license</span></footer>
+<script>
+document.querySelectorAll('.reveal').forEach((el) => el.classList.add('pre'));
+const io = new IntersectionObserver((es) => es.forEach((x) => { if (x.isIntersecting) { x.target.classList.remove('pre'); io.unobserve(x.target); } }), { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+</script>
 </body>
 </html>
