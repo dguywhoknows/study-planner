@@ -1,0 +1,16 @@
+{
+  "name": "study-planner",
+  "version": "2.0.0",
+  "private": true,
+  "description": "AI breaks your syllabus into topics; a spaced-repetition scheduler turns them into a realistic study calendar you can export to Google or Apple Calendar.",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "test": "node tests/run-node.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dguywhoknows/study-planner.git"
+  },
+  "homepage": "https://dguywhoknows.github.io/study-planner/",
+  "license": "MIT"
+}
