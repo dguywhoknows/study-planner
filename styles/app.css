@@ -1,4 +1,4 @@
-:root { --accent: #3b6fe0; }
+:root { --accent: #3d6b4f; }
 .exam { border: 1px solid var(--line); border-radius: 10px; padding: 10px; margin-bottom: 10px; display: grid; gap: 6px; border-left: 5px solid var(--c, var(--accent)); }
 .exam .row .input { padding: 6px 8px; font-size: 13px; }
 .exam textarea { min-height: 52px; font-size: 13px; padding: 6px 8px; }

@@ -1,4 +1,4 @@
-/* core.js — dates, the study scheduler, readiness, streaks, grade maths and calendar export (pure, unit-tested). */
+/* Dates, the study scheduler, readiness, streaks, grade maths and calendar export (pure, unit-tested). */
 
 var DAY_MS = 864e5;
 function isoDate(d) { return d.toISOString().slice(0, 10); }

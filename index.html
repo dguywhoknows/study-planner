@@ -3,81 +3,66 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Exam Planner: From four exams to a plan you can actually follow</title>
-<meta name="description" content="AI breaks each syllabus into topics; a scheduler turns them into a day-by-day calendar with spaced reviews.">
+<title>Exam Planner: A study schedule built around your exam dates and free hours</title>
+<meta name="description" content="Add your exams and how much time you have each day. Each syllabus is split into topics with time estimates, and the planner spreads them over your calendar with reviews before each exam. Missed a day? Replan from today.">
 <meta property="og:title" content="Exam Planner">
-<meta property="og:description" content="AI breaks each syllabus into topics; a scheduler turns them into a day-by-day calendar with spaced reviews.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%233b6fe0'/%3E%3Ctext x='16' y='21' text-anchor='middle' font-family='Arial,Helvetica,sans-serif' font-weight='700' font-size='13' fill='white'%3EEP%3C/text%3E%3C/svg%3E">
+<meta property="og:description" content="Add your exams and how much time you have each day. Each syllabus is split into topics with time estimates, and the planner spreads them over your calendar with reviews before each exam. Missed a day? Replan from today.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%233d6b4f'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='Georgia,serif' font-weight='700' font-size='19' fill='white'%3EE%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style id="type">:root { --font-head: 'Source Serif 4', Georgia, serif; --font-body: 'Source Sans 3', system-ui, sans-serif; }</style>
 <link rel="stylesheet" href="styles/base.css">
 <link rel="stylesheet" href="styles/landing.css">
-<style>:root { --accent: #3b6fe0; }</style>
+<style>:root { --accent: #3d6b4f; }</style>
 </head>
 <body class="landing">
-<header class="l-nav">
-  <a class="l-brand" href="#top"><span class="logo">EP</span><b>Exam Planner</b></a>
-  <nav aria-label="Sections"><a href="#demo">Demo</a><a href="#ask">Ask it</a><a href="#features">Features</a><a href="#faq">FAQ</a></nav>
-  <div class="l-nav-cta"><a class="btn ghost" href="login.html">Log in</a><a class="btn primary" href="login.html">Get started free</a></div>
-</header>
+<header class="l-nav"><div class="l-wrap l-nav-in">
+  <a class="l-brand" href="#top">Exam Planner</a>
+  <nav aria-label="Sections"><a href="#demo">Try it</a><a href="#ask">Commands</a><a href="#features">Features</a><a href="https://github.com/dguywhoknows/study-planner" rel="noopener">Source</a></nav>
+  <div class="l-nav-cta"><a class="btn ghost" href="login.html">Log in</a><a class="btn primary" href="login.html">Sign up free</a></div>
+</div></header>
 
 <main id="top">
-  <section class="l-hero">
-    <p class="l-kicker">Free · runs in your browser · AI built in</p>
-    <h1>From four exams to a plan you can actually follow.</h1>
-    <p class="l-sub">AI breaks each syllabus into topics; a scheduler turns them into a day-by-day calendar with spaced reviews.</p>
-    <div class="l-actions"><a class="btn primary big" href="login.html">Get started free</a><a class="btn big" href="#demo">See it working</a></div>
+  <section class="l-wrap l-hero">
+    <h1>A study schedule built around your exam dates and free hours.</h1>
+    <p class="l-sub">Add your exams and how much time you have each day. Each syllabus is split into topics with time estimates, and the planner spreads them over your calendar with reviews before each exam. Missed a day? Replan from today.</p>
+    <div class="l-actions"><a class="btn primary big" href="login.html">Sign up free</a><a class="l-link" href="#demo">Or try it on this page</a></div>
+    <p class="l-meta">Version 2.0.0 · MIT license · <a href="https://github.com/dguywhoknows/study-planner" rel="noopener">github.com/dguywhoknows/study-planner</a></p>
   </section>
 
-  <section class="l-demo reveal" id="demo">
-    <div class="l-window"><div class="l-window-bar"><i></i><i></i><i></i><span>Exam Planner</span></div>
-      <iframe src="app.html?embed=1" title="Exam Planner live demo" loading="lazy"></iframe></div>
-    <p class="l-caption">This is the real app running below, not a recording. Try it.</p>
+  <section class="l-wrap l-demo" id="demo">
+    <div class="l-frame"><iframe src="app.html?embed=1" title="Exam Planner" loading="lazy"></iframe></div>
+    <p class="l-caption">The app itself, running inside this page. Anything you do here is saved in your browser.</p>
   </section>
 
-  <section class="l-section reveal" id="ask">
-    <div class="l-head"><p class="l-kicker">Just say what you want</p><h2>Tell it in plain words. It uses its own tools to do it.</h2>
-      <p>Open the AI box in the app, type a request, and the AI drives the app's real features for you: it sets things up, edits, runs and reports back. Standing instructions let you shape every AI feature to how you like to work.</p></div>
-    <div class="l-prompts"><div class="l-prompt"><div class="say">Add a biology exam on the 20th covering cells, genetics and evolution</div><div class="does">Adds the exam with its syllabus.</div></div><div class="l-prompt"><div class="say">I can only study 2 hours on weekdays</div><div class="does">Updates your availability and rebuilds the plan.</div></div><div class="l-prompt"><div class="say">Quiz me on my weakest topic</div><div class="does">Opens a practice quiz on the lowest-mastery topic.</div></div></div>
+  <section class="l-wrap l-section" id="ask">
+    <h2>Ask it to do things</h2>
+    <p class="l-lead">Press Ctrl+K in the app (Cmd+K on a Mac) and describe what you want. The model chooses from Exam Planner's own functions, runs them in order and tells you what changed. Some examples:</p>
+    <table class="l-cmds"><tr><td class="say">Add a biology exam on the 20th covering cells, genetics and evolution</td><td>Adds the exam with its syllabus.</td></tr><tr><td class="say">I can only study 2 hours on weekdays</td><td>Updates your availability and rebuilds the plan.</td></tr><tr><td class="say">Quiz me on my weakest topic</td><td>Opens a practice quiz on the lowest-mastery topic.</td></tr></table>
+    <p class="l-small">Instructions you save in the same box, such as "keep it short" or "I'm a beginner", are added to every AI request the app makes.</p>
   </section>
 
-  <section class="l-section reveal" id="features">
-    <div class="l-head"><p class="l-kicker">What it does</p><h2>Everything in one place</h2></div>
-    <div class="l-grid"><div class="l-card"><h3>Exam editor</h3><p>Exam editor with difficulty/confidence sliders and optional syllabus</p></div><div class="l-card"><h3>AI topic breakdown</h3><p>AI topic breakdown with hour estimates and study tips (editable)</p></div><div class="l-card"><h3>Greedy constraint scheduler</h3><p>Urgency × weight priority, subject interleaving, sequential learning units</p></div><div class="l-card"><h3>Spaced repetition</h3><p>Automatic reviews at +2 and +6 days, mock exam and final review before each test</p></div><div class="l-card"><h3>Capacity</h3><p>Capacity, days off and overflow warnings with hour shortfall per subject</p></div><div class="l-card"><h3>Stacked daily-load chart</h3><p>Stacked daily-load chart, weekly calendar, click-to-complete sessions</p></div><div class="l-card"><h3>ICalendar</h3><p>iCalendar (.ics) export and an AI &#x27;today&#x27;s brief&#x27; coach</p></div><div class="l-card"><h3>Replan from today</h3><p>Completed sessions are kept and missed ones are redistributed across the remaining days</p></div><div class="l-card"><h3>Today page</h3><p>Checklist of today&#x27;s sessions, missed-session alert, AI daily brief and a study streak</p></div></div>
+  <section class="l-wrap l-section" id="features">
+    <h2>Features</h2>
+    <dl class="l-feats"><div><dt>Exam editor</dt><dd>With difficulty/confidence sliders and optional syllabus.</dd></div><div><dt>AI topic breakdown</dt><dd>With hour estimates and study tips (editable).</dd></div><div><dt>Greedy constraint scheduler</dt><dd>Urgency × weight priority, subject interleaving, sequential learning units.</dd></div><div><dt>Spaced repetition</dt><dd>Automatic reviews at +2 and +6 days, mock exam and final review before each test.</dd></div><div><dt>Capacity</dt><dd>Days off and overflow warnings with hour shortfall per subject.</dd></div><div><dt>Stacked daily-load chart</dt><dd>Weekly calendar, click-to-complete sessions.</dd></div><div><dt>ICalendar</dt><dd>.ics) export and an AI &#x27;today&#x27;s brief&#x27; coach.</dd></div><div><dt>Replan from today</dt><dd>Completed sessions are kept and missed ones are redistributed across the remaining days.</dd></div><div><dt>Today page</dt><dd>Checklist of today&#x27;s sessions, missed-session alert, AI daily brief and a study streak.</dd></div><div><dt>Focus timer</dt><dd>With configurable focus/break lengths, a chime, and a per-subject focus log.</dd></div></dl>
   </section>
 
-  <section class="l-section reveal">
-    <div class="l-head"><p class="l-kicker">How it works</p><h2>Real engines where it counts, AI where it helps</h2></div>
-    <div class="l-steps">
-      <div><span>1</span><h3>Create a free account</h3><p>One account works across every app on this site.</p></div>
-      <div><span>2</span><h3>Ask in your own words</h3><p>Type or click. The AI handles syllabus → topics + hour estimates + tips (JSON); daily brief that pairs each session with a concrete study technique.</p></div>
-      <div><span>3</span><h3>Keep what you make</h3><p>Your work is saved in your browser and can be exported any time.</p></div>
-    </div>
-    <p class="l-note">Computed locally, with no AI involved: scheduling, spaced repetition, capacity planning, charts, calendar, .ics generation.</p>
+  <section class="l-wrap l-section l-split">
+    <div><h2>Runs in your browser</h2><p>Scheduling, spaced repetition, capacity planning, charts, calendar, .ics generation. None of this needs a network connection or a model.</p></div>
+    <div><h2>Uses a language model for</h2><p>Syllabus → topics + hour estimates + tips. Daily brief that pairs each session with a concrete study technique.</p></div>
   </section>
 
-  <section class="l-section reveal" id="faq">
-    <div class="l-head"><p class="l-kicker">Questions</p><h2>Good to know</h2></div>
-    <div class="l-faq">
-      <details><summary>Is it free?</summary><p>Yes. Every feature is free. Each account gets a daily allowance of AI requests.</p></details>
-      <details><summary>Where is my data stored?</summary><p>What you create stays in this browser on this device. Your account is only used to sign you in and to use the built-in AI. You can export a backup or delete everything from Settings.</p></details>
-      <details><summary>Do I need an API key?</summary><p>No. Signed-in users get the built-in AI with nothing to set up. You can also connect your own Groq or OpenRouter key in Settings if you prefer.</p></details>
-      <details><summary>What can I type into the AI box?</summary><p>Anything you would ask a helpful colleague who knows the app, such as: "Add a biology exam on the 20th covering cells, genetics and evolution". It plans the steps, runs the app's own functions and tells you what it did. The Instructions tab saves preferences every AI feature follows.</p></details>
-      <details><summary>Can I see the code?</summary><p>Yes. It is open source under the MIT license on <a href="https://github.com/dguywhoknows/study-planner" rel="noopener">GitHub</a>, with a <a href="tests/">public test suite</a>.</p></details>
-    </div>
-  </section>
-
-  <section class="l-final reveal">
-    <h2>From four exams to a plan you can actually follow.</h2>
-    <a class="btn primary big" href="login.html">Get started free</a>
+  <section class="l-wrap l-section" id="notes">
+    <h2>Notes</h2>
+    <dl class="l-notes">
+      <dt>Cost</dt><dd>Free. Each account has a daily allowance of AI requests.</dd>
+      <dt>Your data</dt><dd>What you make stays in this browser on this device. Your account is only used for signing in and for the built-in AI. You can export a backup or clear everything from Settings.</dd>
+      <dt>AI access</dt><dd>Signed-in users get the built-in AI with nothing to set up. You can also use your own Groq or OpenRouter key under Settings.</dd>
+      <dt>Source</dt><dd>The code and tests are on <a href="https://github.com/dguywhoknows/study-planner" rel="noopener">GitHub</a> under the MIT license. The tests also run <a href="tests/">in your browser</a>.</dd>
+    </dl>
   </section>
 </main>
 
-<footer class="l-foot"><span>Exam Planner</span><span><a href="https://github.com/dguywhoknows/study-planner" rel="noopener">Source</a> · <a href="tests/">Tests</a> · MIT license</span></footer>
-<script>
-document.querySelectorAll('.reveal').forEach((el) => el.classList.add('pre'));
-const io = new IntersectionObserver((es) => es.forEach((x) => { if (x.isIntersecting) { x.target.classList.remove('pre'); io.unobserve(x.target); } }), { threshold: 0.12 });
-document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
-</script>
+<footer class="l-foot"><div class="l-wrap l-foot-in"><span>Exam Planner, by <a href="https://github.com/dguywhoknows" rel="noopener">dguywhoknows</a></span><span><a href="https://github.com/dguywhoknows/study-planner" rel="noopener">Source</a> · <a href="tests/">Tests</a> · <a href="login.html">Sign up free</a></span></div></footer>
 </body>
 </html>
